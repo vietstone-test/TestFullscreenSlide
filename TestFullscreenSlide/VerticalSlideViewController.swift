@@ -63,6 +63,11 @@ class VerticalSlideViewController: UIViewController {
             belowFullscreenView.leftAnchor.constraint(equalTo: middleFullscreenView.leftAnchor),
             belowFullscreenView.topAnchor.constraint(equalTo: middleFullscreenView.bottomAnchor)
             ])
+        
+        self.view.backgroundColor = .clear
+        self.aboveFullscreenView.backgroundColor = .clear
+        self.middleFullscreenView.backgroundColor = .clear
+        self.belowFullscreenView.backgroundColor = .clear
     }
     
     private func configureGesture() {
