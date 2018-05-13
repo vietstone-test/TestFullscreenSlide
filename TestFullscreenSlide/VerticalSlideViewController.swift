@@ -23,6 +23,7 @@ class VerticalSlideViewController: UIViewController {
             }
             middleFullscreenView.subviews.forEach { $0.removeFromSuperview() }
             placeView(promotionViews[index], on: middleFullscreenView)
+            pageControl.currentPage = index
         }
     }
     
@@ -32,16 +33,7 @@ class VerticalSlideViewController: UIViewController {
     @IBOutlet weak var middleFullscreenView: UIView!
     private var belowFullscreenView: UIView!
     
-    private func placeView(_ view: UIView, on belowView: UIView) {
-        belowView.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: belowView.topAnchor),
-            view.leftAnchor.constraint(equalTo: belowView.leftAnchor),
-            view.bottomAnchor.constraint(equalTo: belowView.bottomAnchor),
-            view.rightAnchor.constraint(equalTo: belowView.rightAnchor)
-            ])
-    }
+    private var pageControl: UIPageControl!
     
     private func configureUI() {
         aboveFullscreenView = UIView()
@@ -68,6 +60,17 @@ class VerticalSlideViewController: UIViewController {
         self.aboveFullscreenView.backgroundColor = .clear
         self.middleFullscreenView.backgroundColor = .clear
         self.belowFullscreenView.backgroundColor = .clear
+        
+        pageControl = UIPageControl()
+        pageControl.hidesForSinglePage = true
+        pageControl.addTarget(self, action: #selector(onPageControlChanged(_:)), for: .valueChanged)
+        self.view.addSubview(pageControl)
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pageControl.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            pageControl.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 5)
+            ])
+        pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
     }
     
     private func configureGesture() {
@@ -75,16 +78,69 @@ class VerticalSlideViewController: UIViewController {
         self.view.addGestureRecognizer(panGesture)
     }
     
-    @objc private func handlePanGesture(_ sender: UIPanGestureRecognizer) {
+    
+    
+    private func initSlideState() {
+        guard isViewLoaded, promotionViews.count > 0 else {
+            return
+        }
+        
+        pageControl.numberOfPages = promotionViews.count
+        middleViewIndex = 0
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureUI()
+        configureGesture()
+        initSlideState()
+        
+        dummyData()
+    }
+
+    // MARK: - Utility
+    
+    private func placeView(_ view: UIView, on belowView: UIView) {
+        belowView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: belowView.topAnchor),
+            view.leftAnchor.constraint(equalTo: belowView.leftAnchor),
+            view.bottomAnchor.constraint(equalTo: belowView.bottomAnchor),
+            view.rightAnchor.constraint(equalTo: belowView.rightAnchor)
+            ])
+    }
+    
+    private func dummyData() {
+        //        let yellowView = UIView()
+        //        yellowView.backgroundColor = .yellow
+        //        let redView = UIView()
+        //        redView.backgroundColor = UIColor(red: 230.0/255.0, green: 57.0/255.0, blue: 98.0/255.0, alpha: 1)
+        //        let cyanView = UIView()
+        //        cyanView.backgroundColor = .cyan
+        //
+        //        self.promotionViews = [yellowView, redView, cyanView]
+        
+        let sydney = PromotionView.instance(with: DummyPromotionViewModel.instanceSydney())
+        let diepson = PromotionView.instance(with: DummyPromotionViewModel.instanceDiepson())
+        let singapore = PromotionView.instance(with: DummyPromotionViewModel.instanceSingapore())
+        
+        self.promotionViews = [sydney, diepson, singapore]
+    }
+    
+    // MARK: - User interaction handling
+    
+    @objc private func handlePanGesture(_ pan: UIPanGestureRecognizer) {
         guard promotionViews.count > 1, let middleViewIndex = middleViewIndex else {
             return
         }
         
-        let translation = sender.translation(in: self.view)
+        let translation = pan.translation(in: self.view)
         middleViewTopConstraint.constant = translation.y
         
-        if sender.state == .began {
-            let velocity = sender.velocity(in: self.view)
+        if pan.state == .began {
+            let velocity = pan.velocity(in: self.view)
             print(velocity.y)
             if velocity.y > 0 { // slide down
                 print("=== began down")
@@ -96,9 +152,9 @@ class VerticalSlideViewController: UIViewController {
                 placeView(promotionViews[nextIndex], on: belowFullscreenView)
             }
         }
-        else if sender.state == .cancelled {
+        else if pan.state == .cancelled {
             moveMiddleView(y: 0, duration: 0.3) // reset
-        } else if sender.state == .ended {
+        } else if pan.state == .ended {
             if translation.y > 50 { // move down then reset
                 let yToMove = middleFullscreenView.frame.size.height
                 moveMiddleView(y: yToMove, duration: 0.4) {
@@ -128,41 +184,9 @@ class VerticalSlideViewController: UIViewController {
         }
     }
     
-    private func initSlideState() {
-        guard isViewLoaded, promotionViews.count > 0 else {
-            return
-        }
-        
-        middleViewIndex = 0
+    @objc private func onPageControlChanged(_ pageControl: UIPageControl) {
+        middleViewIndex = pageControl.currentPage
     }
     
-    private func dummyData() {
-//        let yellowView = UIView()
-//        yellowView.backgroundColor = .yellow
-//        let redView = UIView()
-//        redView.backgroundColor = UIColor(red: 230.0/255.0, green: 57.0/255.0, blue: 98.0/255.0, alpha: 1)
-//        let cyanView = UIView()
-//        cyanView.backgroundColor = .cyan
-//
-//        self.promotionViews = [yellowView, redView, cyanView]
-        
-        let sydney = PromotionView.instance(with: DummyPromotionViewModel.instanceSydney())
-        let diepson = PromotionView.instance(with: DummyPromotionViewModel.instanceDiepson())
-        let singapore = PromotionView.instance(with: DummyPromotionViewModel.instanceSingapore())
-        
-        self.promotionViews = [sydney, diepson, singapore]
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        configureUI()
-        configureGesture()
-        initSlideState()
-        
-        dummyData()
-    }
-
-
 }
 
