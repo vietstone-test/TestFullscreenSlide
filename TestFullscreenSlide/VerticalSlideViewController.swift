@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VerticalSlideViewController.swift
 //  TestFullscreenSlide
 //
 //  Created by Viet Nguyen Tran on 5/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VerticalSlideViewController: UIViewController {
     
     var promotionViews: [UIView] = [] {
         didSet {
@@ -79,10 +79,14 @@ class ViewController: UIViewController {
         middleViewTopConstraint.constant = translation.y
         
         if sender.state == .began {
-            if translation.y > 0 { // slide down
+            let velocity = sender.velocity(in: self.view)
+            print(velocity.y)
+            if velocity.y > 0 { // slide down
+                print("=== began down")
                 let previousIndex = promotionViews.circularPreviousIndex(of: middleViewIndex)
                 placeView(promotionViews[previousIndex], on: aboveFullscreenView)
             } else { // slide up
+                print("=== began up")
                 let nextIndex = promotionViews.circularNextIndex(of: middleViewIndex)
                 placeView(promotionViews[nextIndex], on: belowFullscreenView)
             }
