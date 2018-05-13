@@ -137,14 +137,20 @@ class VerticalSlideViewController: UIViewController {
     }
     
     private func dummyData() {
-        let yellowView = UIView()
-        yellowView.backgroundColor = .yellow
-        let redView = UIView()
-        redView.backgroundColor = UIColor(red: 230.0/255.0, green: 57.0/255.0, blue: 98.0/255.0, alpha: 1)
-        let cyanView = UIView()
-        cyanView.backgroundColor = .cyan
+//        let yellowView = UIView()
+//        yellowView.backgroundColor = .yellow
+//        let redView = UIView()
+//        redView.backgroundColor = UIColor(red: 230.0/255.0, green: 57.0/255.0, blue: 98.0/255.0, alpha: 1)
+//        let cyanView = UIView()
+//        cyanView.backgroundColor = .cyan
+//
+//        self.promotionViews = [yellowView, redView, cyanView]
         
-        self.promotionViews = [yellowView, redView, cyanView]
+        let sydney = PromotionView.instance(with: DummyPromotionViewModel.instanceSydney())
+        let diepson = PromotionView.instance(with: DummyPromotionViewModel.instanceDiepson())
+        let singapore = PromotionView.instance(with: DummyPromotionViewModel.instanceSingapore())
+        
+        self.promotionViews = [sydney, diepson, singapore]
     }
     
     override func viewDidLoad() {

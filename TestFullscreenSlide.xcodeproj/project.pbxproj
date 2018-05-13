@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6507F25520A872CB00E7532A /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507F25420A872CB00E7532A /* PromotionView.swift */; };
+		6507F25720A872D800E7532A /* PromotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25620A872D800E7532A /* PromotionView.xib */; };
+		6507F25920A8744900E7532A /* sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25820A8744900E7532A /* sydney.jpg */; };
+		6507F25B20A8748E00E7532A /* diepson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25A20A8748E00E7532A /* diepson.jpg */; };
+		6507F25D20A8751600E7532A /* singapore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25C20A8751600E7532A /* singapore.jpg */; };
+		6507F26120A8769500E7532A /* btn_book_now.png in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25E20A8769400E7532A /* btn_book_now.png */; };
+		6507F26220A8769500E7532A /* btn_book_now@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6507F25F20A8769400E7532A /* btn_book_now@2x.png */; };
+		6507F26320A8769500E7532A /* btn_book_now@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6507F26020A8769500E7532A /* btn_book_now@3x.png */; };
 		650BCFC920A58B34007C02BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BCFC820A58B34007C02BB /* AppDelegate.swift */; };
 		650BCFCB20A58B34007C02BB /* VerticalSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BCFCA20A58B34007C02BB /* VerticalSlideViewController.swift */; };
 		650BCFCE20A58B34007C02BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BCFCC20A58B34007C02BB /* Main.storyboard */; };
 		650BCFD020A58B36007C02BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650BCFCF20A58B36007C02BB /* Assets.xcassets */; };
 		650BCFD320A58B36007C02BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BCFD120A58B36007C02BB /* LaunchScreen.storyboard */; };
+		651658AF20A87FB3007C6B5A /* DummyPromotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651658AE20A87FB3007C6B5A /* DummyPromotionViewModel.swift */; };
 		65CA064720A5B80A006F5329 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CA064620A5B80A006F5329 /* Array+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6507F25420A872CB00E7532A /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
+		6507F25620A872D800E7532A /* PromotionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionView.xib; sourceTree = "<group>"; };
+		6507F25820A8744900E7532A /* sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sydney.jpg; sourceTree = "<group>"; };
+		6507F25A20A8748E00E7532A /* diepson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diepson.jpg; sourceTree = "<group>"; };
+		6507F25C20A8751600E7532A /* singapore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = singapore.jpg; sourceTree = "<group>"; };
+		6507F25E20A8769400E7532A /* btn_book_now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_book_now.png; sourceTree = "<group>"; };
+		6507F25F20A8769400E7532A /* btn_book_now@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_book_now@2x.png"; sourceTree = "<group>"; };
+		6507F26020A8769500E7532A /* btn_book_now@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_book_now@3x.png"; sourceTree = "<group>"; };
 		650BCFC520A58B34007C02BB /* TestFullscreenSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFullscreenSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650BCFC820A58B34007C02BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650BCFCA20A58B34007C02BB /* VerticalSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlideViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +40,7 @@
 		650BCFCF20A58B36007C02BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		650BCFD220A58B36007C02BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650BCFD420A58B36007C02BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		651658AE20A87FB3007C6B5A /* DummyPromotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPromotionViewModel.swift; sourceTree = "<group>"; };
 		65CA064620A5B80A006F5329 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +81,15 @@
 				650BCFD120A58B36007C02BB /* LaunchScreen.storyboard */,
 				650BCFD420A58B36007C02BB /* Info.plist */,
 				65CA064620A5B80A006F5329 /* Array+.swift */,
+				6507F25420A872CB00E7532A /* PromotionView.swift */,
+				6507F25620A872D800E7532A /* PromotionView.xib */,
+				6507F25820A8744900E7532A /* sydney.jpg */,
+				6507F25A20A8748E00E7532A /* diepson.jpg */,
+				6507F25C20A8751600E7532A /* singapore.jpg */,
+				6507F25E20A8769400E7532A /* btn_book_now.png */,
+				6507F25F20A8769400E7532A /* btn_book_now@2x.png */,
+				6507F26020A8769500E7532A /* btn_book_now@3x.png */,
+				651658AE20A87FB3007C6B5A /* DummyPromotionViewModel.swift */,
 			);
 			path = TestFullscreenSlide;
 			sourceTree = "<group>";
@@ -125,8 +152,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6507F26320A8769500E7532A /* btn_book_now@3x.png in Resources */,
+				6507F25D20A8751600E7532A /* singapore.jpg in Resources */,
+				6507F25720A872D800E7532A /* PromotionView.xib in Resources */,
+				6507F26220A8769500E7532A /* btn_book_now@2x.png in Resources */,
+				6507F25B20A8748E00E7532A /* diepson.jpg in Resources */,
 				650BCFD320A58B36007C02BB /* LaunchScreen.storyboard in Resources */,
+				6507F26120A8769500E7532A /* btn_book_now.png in Resources */,
 				650BCFD020A58B36007C02BB /* Assets.xcassets in Resources */,
+				6507F25920A8744900E7532A /* sydney.jpg in Resources */,
 				650BCFCE20A58B34007C02BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6507F25520A872CB00E7532A /* PromotionView.swift in Sources */,
 				650BCFCB20A58B34007C02BB /* VerticalSlideViewController.swift in Sources */,
 				65CA064720A5B80A006F5329 /* Array+.swift in Sources */,
+				651658AF20A87FB3007C6B5A /* DummyPromotionViewModel.swift in Sources */,
 				650BCFC920A58B34007C02BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PromotionView" customModule="TestFullscreenSlide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sydney.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-14-RlY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LIm-xO-ndB">
+                    <rect key="frame" x="30" y="362.5" width="322" height="234.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departing from Hanoi to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uh-UH-Goy">
+                            <rect key="frame" x="0.0" y="0.0" width="322" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-E1-fmF">
+                            <rect key="frame" x="0.0" y="35.5" width="322" height="43"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, adipiscing elit. Aliquam eget rutrum elit. Morbi convallis felis tortor…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-2p-7oz">
+                            <rect key="frame" x="0.0" y="94.5" width="322" height="54"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eob-Ve-W5A">
+                            <rect key="frame" x="0.0" y="164.5" width="322" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-Cq-hdJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                    <color key="textColor" red="0.85882352941176465" green="0.65098039215686276" blue="0.062745098039215685" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2mc-Br-tCA">
+                                    <rect key="frame" x="90" y="0.0" width="40.5" height="70"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obu-uV-cwg">
+                                            <rect key="frame" x="0.0" y="0.0" width="40.5" height="26.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd0-ux-mYu">
+                                            <rect key="frame" x="0.0" y="26.5" width="40.5" height="43.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-Ks-GtG">
+                                    <rect key="frame" x="186" y="0.0" width="136" height="70"/>
+                                    <state key="normal" image="btn_book_now.png"/>
+                                    <connections>
+                                        <action selector="pressBook:" destination="iN0-l3-epB" eventType="touchUpInside" id="ksR-rI-WkL"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="6Dk-Cq-hdJ" firstAttribute="top" secondItem="eob-Ve-W5A" secondAttribute="top" id="5k4-iH-guu"/>
+                                <constraint firstAttribute="bottom" secondItem="6Dk-Cq-hdJ" secondAttribute="bottom" id="Phf-Hq-VKU"/>
+                                <constraint firstAttribute="bottom" secondItem="2mc-Br-tCA" secondAttribute="bottom" id="QgV-nB-rN6"/>
+                                <constraint firstAttribute="trailing" secondItem="pfm-Ks-GtG" secondAttribute="trailing" id="dYV-hg-njN"/>
+                                <constraint firstItem="2mc-Br-tCA" firstAttribute="leading" secondItem="6Dk-Cq-hdJ" secondAttribute="trailing" constant="10" id="fHf-DK-5Hj"/>
+                                <constraint firstItem="6Dk-Cq-hdJ" firstAttribute="leading" secondItem="eob-Ve-W5A" secondAttribute="leading" id="gc7-aF-49d"/>
+                                <constraint firstItem="pfm-Ks-GtG" firstAttribute="top" secondItem="eob-Ve-W5A" secondAttribute="top" id="n1m-yj-OZb"/>
+                                <constraint firstAttribute="bottom" secondItem="pfm-Ks-GtG" secondAttribute="bottom" id="vkg-PZ-0G1"/>
+                                <constraint firstItem="2mc-Br-tCA" firstAttribute="top" secondItem="eob-Ve-W5A" secondAttribute="top" id="yjx-oN-4UR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pbz-14-RlY" secondAttribute="bottom" id="DgG-Lw-C9f"/>
+                <constraint firstItem="pbz-14-RlY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NTq-jS-6X5"/>
+                <constraint firstItem="LIm-xO-ndB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Ph9-K5-64l"/>
+                <constraint firstAttribute="bottom" secondItem="LIm-xO-ndB" secondAttribute="bottom" constant="70" id="bgn-sU-z8A"/>
+                <constraint firstAttribute="trailing" secondItem="pbz-14-RlY" secondAttribute="trailing" id="rl6-4R-Z4b"/>
+                <constraint firstItem="pbz-14-RlY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="roP-Aj-bdK"/>
+                <constraint firstAttribute="trailing" secondItem="LIm-xO-ndB" secondAttribute="trailing" constant="23" id="yUz-AX-bMH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookButton" destination="pfm-Ks-GtG" id="HTI-nZ-eGX"/>
+                <outlet property="descriptionLabel" destination="7EJ-2p-7oz" id="d07-R5-LuA"/>
+                <outlet property="fromLocationLabel" destination="8Uh-UH-Goy" id="sgU-ou-BxM"/>
+                <outlet property="imageView" destination="pbz-14-RlY" id="dPG-pY-9y2"/>
+                <outlet property="priceCurrencyLabel" destination="Qd0-ux-mYu" id="Ilv-cu-4Ic"/>
+                <outlet property="priceFromLabel" destination="obu-uV-cwg" id="CnV-Sq-pBI"/>
+                <outlet property="priceUnitLabel" destination="6Dk-Cq-hdJ" id="Xva-1T-atZ"/>
+                <outlet property="toLocationLabel" destination="xNW-E1-fmF" id="Y0k-sd-eXW"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_book_now.png" width="136" height="48"/>
+        <image name="sydney.jpg" width="1772" height="1181"/>
+    </resources>
+</document>
